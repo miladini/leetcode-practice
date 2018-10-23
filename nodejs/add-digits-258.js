@@ -3,16 +3,9 @@
  * @return {number}
  */
 var addDigits = function(num) {
-    'use strict';
-    let numS = num.toString();
-    while (numS.length > 1) {
-        let sum = 0;
-        for (let i = 0; i < numS.length; i++) {
-            sum += parseInt(numS.substring(i,i+1));
-        }
-        numS = sum.toString();
-    }
-    return numS;
+    if (num==0) return 0;
+    else if (num%9>0) return num%9;
+    else return 9;
 };
 
-console.log(addDigits(8712387128));
+console.log(addDigits(8752));
