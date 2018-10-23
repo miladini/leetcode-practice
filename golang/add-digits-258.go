@@ -3,21 +3,15 @@ package main
 import "fmt"
 
 func main() {
-	fmt.Println(addDigits(123456789))
+	fmt.Println(addDigits(12345))
 }
 
 func addDigits(num int) int {
-	for num > 9 {
-		sum := 0
-		numc := num
-		for numc > 0 {
-			sum += numc % 10
-			numc /= 10
-		}
-
-		num = sum
+	if num == 0 {
+		return 0
+	} else if (num % 9) > 0 {
+		return num % 9
+	} else {
+		return 9
 	}
-
-	return num
-
 }
