@@ -7,7 +7,6 @@ var numRabbits = function(answers) {
     let map = new Map();
 
     for (let v of answers) {
-        // map[v] = map[v] ? map[v]+1 : 1;
         if (map.has(v)) map.set(v,map.get(v)+1);
         else map.set(v,1);
     }
